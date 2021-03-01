@@ -29,6 +29,7 @@
     50%{background-position:83% 100%}
     100%{background-position:18% 0%}
 }
+#top-sect{animation:fade 2s ease;}
 .row i{
 	 color: black;
 }
@@ -67,6 +68,16 @@ em, mb-5{
 	text-align: justify;
 	text-align-last: center;
 }
+.animate{animation:progBar 1.5s ease-out;}
+	@keyframes progBar{
+    0%{ width: 0; }
+	}
+	.imgdiv{opacity: 1;}
+	.fading{animation:fade 1.5s ease;}
+	@keyframes fade{
+    0%{ opacity: 0; }
+	100%{opacity: 1;}
+	}
 .btn{
 	border-radius:31px/31px;
 }
