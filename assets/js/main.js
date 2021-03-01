@@ -7,18 +7,31 @@ var typed = new Typed('.typing', {
   loop: true
 });
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycby2iXVQUOzW-0AjrVYwT9-bIJteBSHcvm9C-CwDt5vv70sIBJRxkb37/exec'
-            const form = document.getElementById('formMsg');
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-					$('#formMsg').css('display','none');
-					$('#response').css('display','block');
-					})
-                .catch(error => console.error('Error!', error.message))
-            })
+const scriptURL = 'https://script.google.com/macros/s/AKfycby2iXVQUOzW-0AjrVYwT9-bIJteBSHcvm9C-CwDt5vv70sIBJRxkb37/exec'
+const form = document.getElementById('formMsg');
+
+form.addEventListener('submit', e => {
+	  var response = grecaptcha.getResponse();
+	  if(response.length == 0) { 
+		//reCaptcha not verified
+		$('#fillcaptcha').show();
+		e.preventDefault();
+		return false;
+	  }
+	  
+	  else{
+		$('.spinner-border').show();
+		$('#formMsg').css('filter','opacity(0.45)');
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => {
+			$('.spinner-border').hide();
+			$('#formMsg').css('display','none');
+			$('#response').css('display','block');
+			})
+		.catch(error => console.error('Error!', error.message));
+	  }
+})
 
 
 $(window).on('scroll', function () {
