@@ -20,3 +20,12 @@ var typed = new Typed('.typing', {
                 .catch(error => console.error('Error!', error.message))
             })
 
+
+$(window).on('scroll', function () {
+    scroll_pos = $(window).scrollTop() + $(window).height();
+    bar_pos = $('.progress-bar').offset().top + $('.progress-bar').height();
+	project_pos = $('.imgdiv').offset().top;
+    if (scroll_pos > bar_pos) {
+        $('.progress-bar').addClass('animate');
+    };
+});
