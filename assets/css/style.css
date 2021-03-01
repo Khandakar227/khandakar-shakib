@@ -91,6 +91,8 @@ a:hover .caption-content{display: block;}
 .modalImg{float: right;}
 #response{font-size:2.5rem;display:none;border: 10px double;}
 .g-recaptcha{overflow-y: hidden;width: 100%;overflow-x: auto;}
+#fillcaptcha{display:none;color:red;}
+.spinner-border{display:none;position:absolute;top: 50%;left: 50%;}
 
 @media screen and (max-width:450px){
 .hlwrld{font-size: 3rem!important;}
