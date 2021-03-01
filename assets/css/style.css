@@ -45,6 +45,7 @@ em, mb-5{
 	padding-top: 12px;
     font-size: 1.6rem;
 }
+#sidebar-wrapper{overflow: auto;}
 #navpic{
 	max-width:160px;
 	/*border-radius: 50%;*/
@@ -74,77 +75,29 @@ em, mb-5{
 	}
 	.imgdiv{opacity: 1;}
 	.fading{animation:fade 1.5s ease;}
-	@keyframes fade{
-    0%{ opacity: 0; }
-	100%{opacity: 1;}
-	}
-.btn{
-	border-radius:31px/31px;
-}
-.CLP{
-	margin:3rem auto 1rem auto;
-	font-variant: small-caps;
-}
-.codlng{
-	margin: 0px;
-	text-align: justify;
-}
-.bg-second{
-	background-color:#b20000;
-}
+	
+	@keyframes fade{0%{ opacity: 0; }100%{opacity: 1;}}
+.btn{border-radius:31px/31px;}
+.CLP{margin:3rem auto 1rem auto;font-variant: small-caps;}
+.codlng{margin: 0px;text-align: justify;}
+.bg-second{background-color:#b20000;}
 
-.iconify {
-	margin: 10px;
-    font-size: 55px;
-}
-.projects{
-	margin:0px auto;
-	max-width:1200px;
-}
-.caption-content{
-	display: none;
-
-}
-.caption:hover{
-	transition:1.5s ease;
-	background-color: #b20000;
-}
-a:hover .caption-content{
-	display: block;
-}
-.projects img{
-	width:100%;
-}
-.modalImg{
-	float: right;
-}
-#response{
-	font-size:2.5rem;
-	display:none;
-	border: 10px double;
-}
-.g-recaptcha{
-	width: 100%;
-}
+.iconify {margin: 10px;font-size: 55px;}
+.projects{margin:0px auto;max-width:1200px;}
+.caption-content{display: none;}
+.caption:hover{transition:1.5s ease;background-color: #b20000;}
+a:hover .caption-content{display: block;}
+.projects img{width:100%;}
+.modalImg{float: right;}
+#response{font-size:2.5rem;display:none;border: 10px double;}
+.g-recaptcha{overflow-y: hidden;width: 100%;overflow-x: auto;}
 
 @media screen and (max-width:450px){
-.hlwrld{
-	font-size: 3rem!important;
-}
-em{
-	font-size: 1.5rem;
-}
-.service-icon{
-	height: 6rem;
-	width: 6rem;
-    line-height: 6.5rem;
-}
-.mb-5, .my-5 {
-    margin-bottom: 2rem!important;
-}
-.h4, h4 {
-    font-size: 1.1rem;
-}
+.hlwrld{font-size: 3rem!important;}
+em{font-size: 1.5rem;}
+.service-icon{height: 6rem;width: 6rem;line-height: 6.5rem;}
+.mb-5, .my-5 {margin-bottom:2rem!important;}
+.h4, h4 {font-size: 1.1rem;}
 }
 @media (max-width:300px){
 #services .row div{
