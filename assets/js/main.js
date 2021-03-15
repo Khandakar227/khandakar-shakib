@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+
 var typed = new Typed('.typing', {
   strings: ['web developer', 'robotics enthusiast'],
   smartBackspace: true,
