@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="page-top"><a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+<body id="page-top">
+	<!-- Navbar menu -->
+	<a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
     <nav class="navbar navbar-light navbar-expand" id="sidebar-wrapper">
         <div class="container"><button data-toggle="collapse" class="navbar-toggler d-none" data-target="#"></button>
             <div class="collapse navbar-collapse">
@@ -34,6 +36,7 @@
             </div>
         </div>
     </nav>
+	<!-- HOME -->
     <header class="d-flex masthead">
         <div id="top-sect" class="container text-center my-auto">
 				<h1 class="mb-1 hlwrld">>Hello World!</h1>
@@ -41,6 +44,7 @@
             <div class="overlay"></div>
         </div>
     </header>
+	<!-- ABOUT -->
     <section class="bg-light content-section" id="about">
         <div class="container">
             <div class="row">
@@ -51,6 +55,7 @@
             </div>
         </div>
     </section>
+	<!-- SERVICE -->
     <section class="text-center text-white bg-primary content-section" id="services">
         <div class="container">
             <div class="content-section-heading">
@@ -108,6 +113,7 @@
 				<h2 class="CLP">Skills</h2>
 				<span class="iconify" data-toggle="tooltip" data-placement="top" title="BOOTSTRAP" data-icon="logos:bootstrap" data-inline="false"></span>
 				<span class="iconify" data-toggle="tooltip" data-placement="top" title="REACT JS" data-icon="vscode-icons:file-type-reactjs" data-inline="false"></span>
+				<span data-toggle="tooltip" data-placement="top" title="FIREBASE" style="display:inline-block;"> <img  style="width: 55px;height: 60px;margin:10px;" src="assets/img/firebase-Icon.png"/> </span>
 				<span data-toggle="tooltip" data-placement="top" title="Adobe Illustrator" style="display:inline-block;"> <img  style="width: 55px;height: 60px;margin:10px;" src="assets/img/Adobe_Illustrator.png"/> </span>
 				<span data-toggle="tooltip" data-placement="top" title="RASPBERRY PI" class="iconify" data-icon="logos:raspberry-pi" data-inline="false"></span>
 				<span data-toggle="tooltip" data-placement="top" title="ARDUINO IDE" class="iconify" data-icon="logos-arduino" data-inline="false"></span>
@@ -115,6 +121,7 @@
 			</div>
 		 </div>
     </section>
+	<!-- PORTFOLIO -->
     <section id="portfolio" class="content-section">
         <div class="container-fluid">
             <div class="text-center content-section-heading">
@@ -145,8 +152,8 @@
 				<div class="imgdiv"><a data-toggle="modal" data-target="#Programmer" class="portfolio-item" href=""><img src="assets/img/Programmer.jpg"><div class="caption"><div class="caption-content">
 			<h5>AVR micro-controller programmer</h5><p class="mb-0">Home made AVR Micro controller programmer...</p></div></div></a></div>
 			
-			<div class="imgdiv img-thumbnail"><a data-toggle="modal" data-target="#Digital_Art" class="portfolio-item" href=""><img src="assets/img/Digital_Art.jpg"><div class="caption"><div class="caption-content">
-			<h4>Vector Art</h4><p>Random Art</p></div></div></a></div>
+			<div class="imgdiv"><a class="portfolio-item" href="https://quran-web.netlify.app"><img src="assets/img/quran-web.png"><div class="caption"><div class="caption-content">
+			<h4>Quran Web</h4><p>A web app for reading the Quran. Only bangla and english translations were added.</p></div></div></a></div>
 			
 			<div class="imgdiv"><a data-toggle="modal" data-target="#SV" class="portfolio-item" href=""><img src="assets/img/Surveiling_Vehicle.jpg"><div class="caption"><div class="caption-content">
 			<h4>Surveiling Vehicle using ESP8266</h4><p>A vehicle which is controlled using the Blynk app over WIFI... </p></div></div></a></div>
@@ -190,19 +197,6 @@
 				</div>
 			</div>
 		</div>
-	
-	 <div class="modal fade" id="Digital_Art">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i></button>
-				</div>
-				<div class="modal-body">
-				<img src="assets/img/fullImg/Digital_Art.jpg">
-				</div>
-			</div>
-		</div>
-	 </div>
 	 
 	 <div class="modal fade" id="wbot">
 		<div class="modal-dialog modal-dialog-centered">
@@ -264,11 +258,13 @@
             </div>
         </div>
     </section>
+	<!-- RESUME -->
     <section id="resume" class="text-white content-section">
         <div class="container text-center">
             <h2 class="mb-4 cv">Checkout my resume</h2><a class="btn btn-light btn-xl mr-4 mt-2" role="button" href="resume.html">Click Here!</a><a class="btn btn-dark btn-xl mt-2 mr-4" role="button" href="assets/Resume.pdf" download="Resume of Khandakar Shakib"><i class="fa fa-download"></i> Download</a>
         </div>
     </section>
+	<!-- CONTACT -->
     <section id="contact" class="position-relative container">
 	<h2 class="text-center mt-3">CONTACT</h2>
 	
@@ -297,6 +293,7 @@
 	  <div id="response" class="text-center pb-5 pt-5 mb-2 mt-2">Your message has been sent. Thank you</div>
 	  
 	</section>
+	<!-- FOOTER -->
     <footer class="text-center footer">
         <div class="container">
             <ul class="list-inline mb-5">
