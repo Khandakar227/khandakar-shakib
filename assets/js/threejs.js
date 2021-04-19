@@ -62,7 +62,7 @@
         document.addEventListener('touchmove',onTouchingSphere)
 
         function animate(){
-        targetX = mouseX*.005
+        targetX = mouseX*.006
         targetY = mouseY*.002
         const time = 0.01
 
@@ -85,11 +85,11 @@
 
         window.addEventListener('resize', onWindowResize)
 
-        const light = new THREE.PointLight( 0xfffff, 1 );
+        const light = new THREE.PointLight( 'crimson', 10 );
         light.position.set(-1.86,1,-1.65);
         scene.add(light);
 
-        const light2 = new THREE.PointLight( 0x96ff, 1 );
+        const light2 = new THREE.PointLight( 'crimson', 10 );
         light2.position.set(1.6,-1.52,-1.6);
         scene.add(light2);
        
