@@ -23,12 +23,16 @@
         console.log(renderer)
         const scene = new THREE.Scene()
         const camera = new THREE.PerspectiveCamera(FieldOfView, AspectRatio, Near, Far);
-        camera.position.z = 2.5;
 
+        //Orbit Controls
+        let controls = new OrbitControls( camera, renderer.domElement );
+        //Camera position
+        camera.position.z = 2.5;
+        controls.update();
 
         const geometry = new THREE.SphereBufferGeometry( .7, 32, 32 );
 
-        const texture = new THREE.TextureLoader().load('./assets/img/normalMap.jpg')
+        const texture = new THREE.TextureLoader().load('./assets/img/NormalMap.png')
         const material = new THREE.MeshStandardMaterial({color: 'white'});
         material.roughness = .2
         material.metalness = .9
@@ -53,13 +57,8 @@
             mouseX = (e.clientX-windowX)
             mouseY = (e.clientY-windowY)
         }
-        const onTouchingSphere=(e)=>{
-            mouseX = (e.targetTouches[0].clientX-windowX)
-            mouseY = (e.targetTouches[0].clientY-windowY)
-        }
 
         document.addEventListener('mousemove', onDraggingSphere)
-        document.addEventListener('touchmove',onTouchingSphere)
 
         function animate(){
         targetX = mouseX*.006
