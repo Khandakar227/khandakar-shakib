@@ -28,7 +28,7 @@
 
         const geometry = new THREE.SphereBufferGeometry( .7, 32, 32 );
 
-        const texture = new THREE.TextureLoader().load('./assets/img/NormalMap.png')
+        const texture = new THREE.TextureLoader().load('./assets/img/normalMap.png')
         const material = new THREE.MeshStandardMaterial({color: 'white'});
         material.roughness = .2
         material.metalness = .9
