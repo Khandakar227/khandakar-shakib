@@ -20,7 +20,6 @@
         renderer.setSize(window.innerWidth, window.innerHeight)
         document.getElementById('canvas-container').appendChild(renderer.domElement)
 
-        console.log(renderer)
         const scene = new THREE.Scene()
         const camera = new THREE.PerspectiveCamera(FieldOfView, AspectRatio, Near, Far);
 
@@ -40,7 +39,6 @@
 
         const sphere = new THREE.Mesh(geometry, material);
         scene.add(sphere);
-        console.log(sphere)
         renderer.render(scene,camera);
 
         const windowX = window.innerWidth/2
