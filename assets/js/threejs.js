@@ -26,7 +26,7 @@
         //Orbit Controls
         let controls = new OrbitControls( camera, renderer.domElement );
         //Camera position
-        camera.position.z = 2.5;
+        camera.position.z = 1.8;
         controls.update();
 
         const geometry = new THREE.SphereBufferGeometry( .7, 32, 32 );
