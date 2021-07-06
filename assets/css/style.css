@@ -79,7 +79,11 @@ em, mb-5{
 	@keyframes progBar{
     0%{ width: 0; }
 	}
-	.imgdiv{opacity: 1;}
+	.imgdiv{
+    opacity: 1;
+    padding: 5px;
+    background: rgba(0,0,0,0.1);
+}
 	.fading{animation:fade 1.5s ease;}
 	
 	@keyframes fade{0%{ opacity: 0; }100%{opacity: 1;}}
@@ -105,6 +109,12 @@ a:hover .caption-content{display: flex;}
     margin: 6%!important;
     flex-direction: column;
     justify-content: center;
+}
+.service-icon-img {
+    width: 78px;
+}
+li.nav-item.sidebar-nav-item {
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 @media screen and (max-width:450px){
