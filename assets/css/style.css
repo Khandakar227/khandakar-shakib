@@ -116,6 +116,10 @@ a:hover .caption-content{display: flex;}
 li.nav-item.sidebar-nav-item {
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
+.project-img {
+    max-height: 247px;
+    width: auto!important;
+}
 
 @media screen and (max-width:450px){
 .hlwrld{font-size: 3rem!important;}
