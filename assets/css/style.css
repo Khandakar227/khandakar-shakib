@@ -35,7 +35,8 @@
     background: linear-gradient(0deg, rgba(36,0,0,1) 0%, rgba(84,0,0,1) 35%, rgba(103,0,0,1) 100%);
 }
 #top-sect{animation:fade 2s ease;position: absolute; top: 35%;right: 0;left: 0;}
-.hlwrld{  mix-blend-mode: exclusion;  color: ghostwhite;}
+.hlwrld{  mix-blend-mode: exclusion;  color: ghostwhite;
+    font-family: 'Aguafina Script', cursive;}
 .row i{
 	 color: black;
 }
@@ -43,7 +44,7 @@
 	display: inline-block;
     width: 50%;
 }
-em, mb-5{
+em, .mb-5{
   font-style: initial;
   font-variant: small-caps;
 }
