@@ -2,7 +2,6 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-
 var typed = new Typed('.typing', {
   strings: ['web developer', 'robotics enthusiast'],
   smartBackspace: true,
@@ -41,9 +40,26 @@ form.addEventListener('submit', e => {
 
 $(window).on('scroll', function () {
     scroll_pos = $(window).scrollTop() + $(window).height();
+	about_pos = $('.bg_about svg').offset().top + $('.bg_about svg').height();
+	service_pos = $('.bg_service svg').offset().top + $('.bg_service svg').height();
     bar_pos = $('.progress-bar').offset().top + $('.progress-bar').height();
 	project_pos = $('.imgdiv').offset().top;
     if (scroll_pos > bar_pos) {
         $('.progress-bar').addClass('animate');
     };
 });
+function animeObserver(selector, animationClass) {
+	const observer = new IntersectionObserver((entries, obs)=>{
+		entries.forEach(entry=>{
+			if(entry.isIntersecting){
+				entry.target.classList.add(animationClass);
+			}
+		})
+	})
+	observer.observe(document.querySelector(selector))
+}
+animeObserver('.bg_about svg', 'fadeSlide')
+animeObserver('.bg_contact svg', 'ScaleUp')
+animeObserver('.bg_resume svg', 'fadeIn')
+animeObserver('.bg_portfolio svg', 'slideDown')
+animeObserver('.bg_service svg', 'reverseFadeSlide')
