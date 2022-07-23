@@ -1,0 +1,98 @@
+---
+import Contact from "../components/Contact.svelte";
+import Portfolio from "../components/Portfolio.svelte";
+import SideBar from "../components/SideBar.astro";
+import Skillset from "../components/Skillset.svelte";
+import Layout from "../layouts/Layout.astro";
+
+const expertise = [
+	{ title: "UI/UX design", description: "Mobile first responsive design. Elegant, rich UI design prioritizing performance", image: "/icons/ui-design.png" },
+	{ title: "Secured back end development", description: "Design back end that prioritizes security and employs best practices and appropriate data structures", image: "/icons/server.png" },
+	{ title: "Interactive web application", description: "Building high performant, easy to use ineractive web apps", image: "/icons/interactive.png" },
+	{ title: "Chatbot integration", description: "Integrate chatbot to a an app for 24/7 customer service, personalize communication, automate repetitive tasks", image: "/icons/chatbot.png" },
+	{ title: "Web automation", description: "Automating repitative task reducing time consumption and productivity", image: "/icons/selenium.png" }
+]
+---
+
+<Layout title="Khandakar Shakib" class="sm:flex">
+	<SideBar title="shkb" />
+	<main class="mx-auto sm:pt-0 w-full">
+		<!-- Home -->
+		<div class="flex h-screen items-center bg-image" id="home">
+			<div class="mx-auto py-12 px-1 gap-4 md:flex items-center max-w-7xl section">
+				<div class="py-5 text-center sm:text-start">
+					<p class="sm:text-2xl pb-4" data-sal="slide-up">Hello world!</p>
+					<h3 class="text-4xl sm:text-5xl font-extrabold pb-2 pt-4" data-sal="slide-up"
+						data-sal-duration="500">My name is</h3>
+					<h2 class="text-6xl sm:text-7xl font-extrabold font-poppins pt-3 pb-1" data-sal="slide-up"
+						data-sal-duration="800">Khandakar Shakib</h2>
+					<p class="text-xl sm:text-3xl py-4" data-sal="slide-up">
+						I am a passionate <span class="font-poppins text-indigo-800 bg-white sm:text-4xl">fullstack web developer</span> based in Bangladesh. </p>
+				</div>
+				<div class="w-full max-w-xl">
+					<img src="me.png" alt="Shakib" />
+				</div>
+			</div>
+		</div>
+
+		<!-- About -->
+		<div class="py-16 max-w-7xl mx-auto section" id="about" data-sal="slide-up">
+			<h2 class="text-4xl pb-4 font-extrabold text-center underline underline-offset-8"> About me </h2>
+			<div class="text-xl sm:text-2xl py-4 text-justify px-1">
+				I am obsessed with building projects. Created a non-profit website for a college's IT club. I'm looking
+				for a position at a great company where I can be a hardworking asset to any team and learn, grow, and
+				develop over time. I've been actively involved in the web development community since graduating from
+				Chittagong College.
+			</div>
+		</div>
+		<!-- Service -->
+		<div class="py-16 max-w-7xl mx-auto section" id="service">
+			<h2 class="text-4xl pb-4 font-extrabold text-center underline underline-offset-8"> Field of expertise </h2>
+			<div class="py-3 grid justify-center items-stretch gap-6 grid\ sm:grid-cols-2">
+				{
+				expertise.map((field, i) => (
+				<div class="flex gap-3 items-stretch justify-start bg-zinc-700 rounded shadow-md w-full"
+					data-sal="slide-up" data-sal-duration={100*(i+1)+"s"}>
+					<img class="mt-4 mx-1 h-16 w-auto" src={field.image} alt={field.title} />
+					<div class="grid items-stretch justify-center py-2 px-1">
+						<h4 class="text-lg py-2 font-poppins font-bold"> {field.title} </h4>
+						<p>{field.description}</p>
+					</div>
+				</div>
+				))
+				}
+			</div>
+			<div class="mx-auto">
+				<h2 class="text-4xl py-12 font-extrabold text-center underline underline-offset-8">Skill set</h2>
+				<Skillset />
+			</div>
+		</div>
+		<!-- Projects -->
+		<div class="mx-auto">
+			<h2 class="text-4xl py-12 font-extrabold text-center underline underline-offset-8 section" id="projects">Projects
+			</h2>
+			<Portfolio />
+		</div>
+		<!-- Contact -->
+		<div class="mx-auto section pb-7">
+			<h2 class="text-4xl py-12 font-extrabold text-center underline underline-offset-8" id="contact">Contact</h2>
+			<Contact client:load />
+		</div>
+	</main>
+
+	<script>
+		import sal from "sal.js";
+		import scrollSpy from "simple-scrollspy";
+		sal();
+
+		const nav_links = document.querySelectorAll("[data-navlink]");
+
+		const options = {
+			sectionClass: '.section',           // Query selector to your sections
+			menuActiveTarget: '[data-navlink]',      // Query selector to your elements that will be added `active` class
+			activeClass: 'bg-indigo-900',
+			offset: 200,                          // Menu item will active before scroll to a matched section 200px
+		}
+		scrollSpy('[data-navbar="Navbar"]', options);
+	</script>
+</Layout>

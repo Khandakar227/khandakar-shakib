@@ -1,0 +1,79 @@
+---
+export interface Props {
+  title: string;
+}
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#service" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+const { title } = Astro.props as Props;
+---
+
+<nav class="z-30 sticky top-0 left-0 w-full">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 bg-zinc-800 shadow">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+        <button type="button"
+          data-name="hamburger"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-indigo-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-900"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+
+          <svg data-name="open-nav" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg data-name="close-nav" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex-1 flex items-center justify-between sm:items-stretch sm:justify-start">
+        <div class="flex-shrink-0 flex items-center flex-auto">
+          <h1 class="block font-extrabold text-xl sm:text-2xl w-auto text-white"> {title} </h1>
+        </div>
+
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            {
+            navItems.map((navItem) => (
+            <a href="#" class="text-base text-white px-3 py-2 rounded-md font-medium hover:bg-zinc-900 transition"
+              aria-current="page">{navItem.name}</a>
+            ))
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sm:hidden h-0 transform overflow-auto ease-in-out transition-all duration-200 -translate-x-full bg-zinc-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 shadow">
+      {
+      navItems.map((navItem) => (
+      <a href="#" class="text-white block px-3 py-2 rounded-md text-base text-center border-b border-zinc-700 font-medium hover:bg-zinc-900 transition"
+        aria-current="page">{navItem.name}</a>
+      ))
+      }
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menu = document.querySelector('button[data-name="hamburger"');
+  menu.addEventListener('click', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeIcon = document.querySelector('svg[data-name="close-nav"]');
+    const openIcon = document.querySelector('svg[data-name="open-nav"]');
+    mobileMenu.classList.toggle('-translate-x-full');
+    mobileMenu.classList.toggle('h-0');
+    closeIcon.classList.toggle('hidden');
+    openIcon.classList.toggle('hidden');
+  })
+</script>

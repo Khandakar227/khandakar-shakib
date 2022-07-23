@@ -1,0 +1,44 @@
+---
+import "../assets/base.css";
+import 'sal.js/dist/sal.css';
+
+export interface Props {
+	title: string;
+	class?: string;
+}
+
+const { title, class: _class } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<title>{title}</title>
+</head>
+
+<body class={`mx-auto bg-zinc-800 text-white overflow-x-hidden ${_class}`}>
+	<noscript>
+		<style type="text/css">
+			[data-sal|='fade'] {
+				opacity: 1;
+			}
+			[data-sal|='slide'],
+			[data-sal|='zoom'] {
+				opacity: 1;
+				transform: none;
+			}
+
+			[data-sal|='flip'] {
+				transform: none;
+			}
+		</style>
+	</noscript>
+	<slot />
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+---
+import Home from 'svelte-material-icons/Home.svelte';
+import Account from 'svelte-material-icons/Account.svelte';
+import BriefcaseVariant from 'svelte-material-icons/BriefcaseVariant.svelte';
+import Tools from 'svelte-material-icons/Tools.svelte';
+import Phone from 'svelte-material-icons/Phone.svelte';
+
+export interface Props {
+    title: string;
+}
+let iconProp = {
+    size: "1", height: "48", width: "48", color: "white", viewBox: "0 0 24 24"
+};
+
+
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#service" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
+const { title } = Astro.props as Props;
+---
+
+<nav class="sticky top-0 sm:w-16 pt-2 bg-black shadow-lg z-30">
+    <div class="flex sm:fixed sm:flex-col top-0 left-0 sm:h-screen sm:w-16">
+        <h1 class="font-extrabold text-xl px-1 py-2 sm:text-2xl max-h-32 w-auto text-white"> {title} </h1>
+        <!-- Hamburger button -->
+        <div class="flex items-center sm:hidden flex-1 justify-end">
+            <button type="button"
+              data-name="hamburger"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-indigo-900 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-900"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+    
+              <svg data-name="open-nav" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <svg data-name="close-nav" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        <div class="hidden sm:flex flex-col justify-center items-center flex-1" data-navbar="Navbar">
+            <a href="#home" class="sidebar-icon group" aria-current="page" data-navlink="home">
+                <Home {...iconProp} />
+                <span class="sidebar-tooltip group-hover:scale-100"> Home </span>
+            </a>
+            <a href="#about" class="sidebar-icon group" aria-current="page" data-navlink="about">
+                <Account {...iconProp} />
+                <span class="sidebar-tooltip group-hover:scale-100"> About </span>
+            </a>
+            <a href="#service" class="sidebar-icon group" aria-current="page" data-navlink="service">
+                <Tools {...iconProp} />
+                <span class="sidebar-tooltip group-hover:scale-100"> Service </span>
+            </a>
+            <a href="#projects" class="sidebar-icon group" aria-current="page" data-navlink="projects">
+                <BriefcaseVariant {...iconProp} />
+                <span class="sidebar-tooltip group-hover:scale-100"> Projects </span>
+            </a>
+            <a href="#contact" class="sidebar-icon group" aria-current="page" data-navlink="contact">
+                <Phone {...iconProp} />
+                <span class="sidebar-tooltip group-hover:scale-100"> Contact </span>
+            </a>
+        </div>
+    </div>
+
+<!-- mobile menu -->
+  <div class="sm:hidden h-0 transform overflow-auto ease-in-out transition-all duration-200 -translate-x-full bg-zinc-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 shadow" data-navbar="mobile-Navbar">
+      {
+      navItems.map((navItem) => (
+      <a href={navItem.href} class="text-white block px-3 py-2 rounded-md text-base text-center border-b border-zinc-700 font-medium hover:bg-zinc-900 transition"
+        aria-current="page"  data-navlink={navItem.href.replace("#", "")}>{navItem.name}</a>
+      ))
+      }
+    </div>
+  </div>
+</nav>
+
+
+<script>
+    const menu = document.querySelector('button[data-name="hamburger"');
+    menu.addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeIcon = document.querySelector('svg[data-name="close-nav"]');
+      const openIcon = document.querySelector('svg[data-name="open-nav"]');
+      mobileMenu.classList.toggle('-translate-x-full');
+      mobileMenu.classList.toggle('h-0');
+      closeIcon.classList.toggle('hidden');
+      openIcon.classList.toggle('hidden');
+    })
+  </script>

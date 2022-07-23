@@ -1,0 +1,28 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "help": "astro --help",
+    "preview": "astro preview",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "^0.2.0",
+    "astro": "1.0.0-beta.64",
+    "svelte": "^3.49.0"
+  },
+  "resolutions": {
+    "parse-path": "5.0.0",
+    "glob-parent": "6.0.1"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^0.2.3",
+    "sal.js": "^0.8.5",
+    "simple-scrollspy": "^2.2.0",
+    "svelte-material-icons": "^2.0.2"
+  }
+}

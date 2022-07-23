@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Prompt", system-ui, sans-serif;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+  }
+  .font-poppins {
+    font-family: "Righteous", sans-serif;
+  }
+  .max-w-xxs {
+    max-width: 480px;
+  }
+  .min-w-xxs {
+    min-width: 280px;
+  }
+  .bg-image {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1000' height='645' preserveAspectRatio='none' viewBox='0 0 1000 645'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1231%26quot%3b)' fill='none'%3e%3crect width='1000' height='645' x='0' y='0' fill='rgba(39%2c 39%2c 42%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c310.663C70.552%2c322.678%2c147.861%2c362.314%2c209.767%2c326.403C271.506%2c290.589%2c286.821%2c207.057%2c299.643%2c136.843C310.529%2c77.232%2c282.68%2c20.521%2c276.637%2c-39.774C270.235%2c-103.645%2c298.683%2c-174.548%2c263.079%2c-227.96C226.914%2c-282.214%2c155.854%2c-299.487%2c92.701%2c-315.71C31.211%2c-331.506%2c-31.702%2c-332.575%2c-93.858%2c-319.65C-160.169%2c-305.861%2c-239.22%2c-296.005%2c-275.892%2c-239.062C-312.665%2c-181.961%2c-273.409%2c-107.352%2c-274.314%2c-39.44C-275.075%2c17.643%2c-299.715%2c74.372%2c-280.788%2c128.231C-261.078%2c184.316%2c-218.228%2c229.615%2c-168.379%2c262.003C-118.375%2c294.491%2c-58.785%2c300.652%2c0%2c310.663' fill='%231f1f21'%3e%3c/path%3e%3cpath d='M1000 1131.112C1089.468 1141.211 1167.088 1070.777 1237.866 1015.127 1303.465 963.549 1355.147 898.915 1391.098 823.608 1427.529 747.296 1459.637 664.308 1445.116 581.002 1430.761 498.651 1371.781 433.185 1312.73 374.018 1256.8980000000001 318.076 1190.925 275.208 1115.705 250.945 1038.997 226.202 952.595 200.515 879.39 234.24099999999999 807.593 267.318 783.489 354.485 743.26 422.533 710.1800000000001 478.488 675.967 532.764 665.03 596.8389999999999 653.8820000000001 662.148 658.421 728.457 680.369 790.97 703.819 857.76 745.838 913.472 794.312 965.057 855.902 1030.599 910.629 1121.024 1000 1131.112' fill='%232f2f33'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1231'%3e%3crect width='1000' height='645' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center;
+  }
+  .min-w-lg {
+    min-width: 25rem;
+  }
+}
+@layer components {
+  .sidebar-icon {
+    @apply relative h-12 w-12 mx-auto flex justify-center items-center bg-zinc-800 my-3 px-2 py-1 font-medium rounded-3xl hover:rounded-xl hover:bg-indigo-700 transition-all
+    duration-300 ease-linear;
+  }
+  .sidebar-tooltip {
+    @apply absolute top-0 left-full p-2 m-2 w-auto min-w-max bg-indigo-800 text-xs font-bold rounded-md shadow-md transition-all duration-100 scale-0 origin-left;
+  }
+}
