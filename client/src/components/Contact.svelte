@@ -17,7 +17,7 @@
         body: JSON.stringify(data),
       };
 
-      const response = await fetch("http://localhost:8080/api/contact", options);
+      const response = await fetch("https://khandakar227-github-io.vercel.app/api/contact", options);
       if (!response.ok) {
         submissionErrorMessage = "Something went wrong";
         loadingStatus = "not-loading";
