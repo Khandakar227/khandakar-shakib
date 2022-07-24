@@ -5,14 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm i && astro build",
     "help": "astro --help",
-    "preview": "astro preview",
-    "preinstall": "npx npm-force-resolutions"
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/svelte": "^0.2.0",
-    "astro": "1.0.0-beta.64",
+    "astro": "1.0.0-beta.73",
     "svelte": "^3.49.0"
   },
   "resolutions": {
