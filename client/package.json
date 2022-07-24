@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^0.2.3",
+    "astro-seo": "^0.5.0",
     "sal.js": "^0.8.5",
     "simple-scrollspy": "^2.2.0",
     "svelte-material-icons": "^2.0.2"

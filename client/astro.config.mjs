@@ -5,7 +5,7 @@ import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site:"khandakar227.github.io",
+  site:"https://khandakar227.github.io",
   server: {
     tailwindConfig: "./tailwind.config.js"
   },

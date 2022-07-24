@@ -18,8 +18,7 @@ const expertise = [
 	<SideBar title="shkb" />
 	<main class="mx-auto sm:pt-0 w-full">
 		<!-- Home -->
-		<div class="flex h-screen items-center bg-image" id="home">
-			<div class="mx-auto py-12 px-1 gap-4 md:flex items-center max-w-7xl section">
+		<div class="grid h-screen items-center bg-image justify-center md:grid-cols-2 gap-3 px-4 section" id="home">
 				<div class="py-5 text-center sm:text-start">
 					<p class="sm:text-2xl pb-4" data-sal="slide-up">Hello world!</p>
 					<h3 class="text-4xl sm:text-5xl font-extrabold pb-2 pt-4" data-sal="slide-up"
@@ -29,20 +28,22 @@ const expertise = [
 					<p class="text-xl sm:text-3xl py-4" data-sal="slide-up">
 						I am a passionate <span class="font-poppins text-indigo-800 bg-white sm:text-4xl">fullstack web developer</span> based in Bangladesh. </p>
 				</div>
-				<div class="w-full max-w-xl">
-					<img src="me.png" alt="Shakib" />
+				<div class="w-full mx-auto">
+					<img class="w-full mx-auto sm:p-4" src="developing.min.svg" alt="developing" />
 				</div>
-			</div>
 		</div>
 
 		<!-- About -->
-		<div class="py-16 max-w-7xl mx-auto section" id="about" data-sal="slide-up">
-			<h2 class="text-4xl pb-4 font-extrabold text-center underline underline-offset-8"> About me </h2>
-			<div class="text-xl sm:text-2xl py-4 text-justify px-1">
-				I am obsessed with building projects. Created a non-profit website for a college's IT club. I'm looking
-				for a position at a great company where I can be a hardworking asset to any team and learn, grow, and
-				develop over time. I've been actively involved in the web development community since graduating from
-				Chittagong College.
+		<div class="py-16 max-w-7xl mx-auto min-h-[50vh] md:grid md:grid-cols-2 justify-between items-center gap-2 section" id="about" data-sal="slide-up">
+			<div class="mx-auto w-full"><img class="mx-auto max-w-xl w-full" src="me.png" alt="Shakib"/></div>
+			<div class="grid gap-4">
+				<h2 class="text-4xl pb-4 font-extrabold text-center underline underline-offset-8"> About me </h2>
+				<div class="text-xl py-4 text-justify px-1">
+					I am obsessed with building projects. Created a non-profit website for a college's IT club. I'm looking
+					for a position at a great company where I can be a hardworking asset to any team and learn, grow, and
+					develop over time. I've been actively involved in the web development community since graduating from
+					Chittagong College.
+				</div>
 			</div>
 		</div>
 		<!-- Service -->

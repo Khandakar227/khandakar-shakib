@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import "../assets/base.css";
 import 'sal.js/dist/sal.css';
 
@@ -17,8 +18,7 @@ const { title, class: _class } = Astro.props as Props;
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/png" href="/favicon.png" />
-
-	<title>{title}</title>
+	<SEO title={title} description="Personal portfolio of Khandakar Shakib." />
 </head>
 
 <body class={`mx-auto bg-zinc-800 text-white overflow-x-hidden ${_class}`}>

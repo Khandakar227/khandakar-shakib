@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("*", (_, res) => {
+    res.redirect("https://khandakar227.pages.dev")
+});
+
 app.use("/api/contact", contact);
 
 //Server
