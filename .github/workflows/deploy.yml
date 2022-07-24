@@ -24,17 +24,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16
-      
-      #Go to client directory
-      - name: Client dir
-        run: cd client
 
       # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
       - name: Install dependencies
+      - working-directory: ./client
         run: npm ci
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
       - name: Build Astro
+      - working-directory: ./client
         run: npm run build
 
       - name: Deploy to GitHub Pages

@@ -23,7 +23,7 @@
       },
     },
     {
-      src: "https://khandakar227.github.io/assets/img/site-ccitc.png",
+      src: "/img/CCITC.jpg",
       info: {
         title: "CCITC",
         desc: "Checkout the official site of CCITC",
