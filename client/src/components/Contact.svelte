@@ -82,9 +82,10 @@
         {#if submissionErrorMessage}
           <p class="my-2 p-2 rounded-md bg-red-700">{submissionErrorMessage}</p>
         {/if}
+        
         {#if !submitted}
         <button
-          class="flex-shrink-0 bg-indigo-700 hover:bg-indigo-900 border-indigo-700 hover:border-indigo-700 border-4 text-white py-2 px-3 rounded text-lg"
+          class="bg-indigo-700 btn"
           disabled={loadingStatus === "loading" ? true : false}
           type="submit"
         >

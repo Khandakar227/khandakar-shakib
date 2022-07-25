@@ -31,6 +31,9 @@
   }
 }
 @layer components {
+  .btn, [type=submit] {
+    @apply bg-indigo-700 block p-4 text-center cursor-pointer rounded-md hover:bg-indigo-800 transition-all hover:-translate-y-1;
+  }
   .sidebar-icon {
     @apply relative h-12 w-12 mx-auto flex justify-center items-center bg-zinc-800 my-3 px-2 py-1 font-medium rounded-3xl hover:rounded-xl hover:bg-indigo-700 transition-all
     duration-300 ease-linear;

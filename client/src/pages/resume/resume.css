@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Righteous&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Prompt", system-ui, sans-serif;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+  }
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+  .font-righteous {
+    font-family: "Righteous", sans-serif;
+  }
+}
+
+@layer components {
+    .heading {
+        @apply text-2xl text-indigo-800 py-4 uppercase;
+    }
+    .field {
+        @apply font-bold py-1 pr-4;
+    }
+}

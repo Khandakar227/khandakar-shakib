@@ -1,0 +1,151 @@
+---
+import Progress from "../../components/Progress.astro"
+import "./resume.css";
+import Image from "./shakib.resume.jpg";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume - Khandakar Shakib</title>
+	<meta name="description" content="Here is my resume.">
+	<link rel="icon" type="image/png" href="/favicon.png" />
+</head>
+
+<body>
+	<main class="mx-auto shadow-md rounded-md sm:py-2 max-w-7xl">
+		<div class="sm:flex gap-4 justify-start items-start bg-indigo-800 px-5">
+			<img class="w-full max-w-[10rem] rounded-full py-3" src={Image} alt="Shakib" />
+			<h1 class="py-4 font-bold text-2xl sm:text-5xl text-white">Khandakar Shakib Al Hasan</h1>
+		</div>
+
+		<section class="grid gap-2 items-start sm:grid-cols-2">
+			<div>
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">Personal</h2>
+					<hr />
+					<table cellspacing="5" class="sm:text-lg">
+						<tbody>
+							<tr class="py-4 border-y-2">
+								<td class="field"> Name </td>
+								<td class="field-value"> Khandakar shakib al hasan </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Date of Birth </td>
+								<td class="field-value"> 16 December, 2002 </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Relationship </td>
+								<td class="field-value"> Single </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Nationality </td>
+								<td class="field-value"> Bangladeshi </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Languages </td>
+								<td class="field-value"> Bangla, English </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">Contact</h2>
+					<hr />
+					<table>
+						<tbody>
+							<tr class="py-4 border-y-2">
+								<td class="field"> Phone no. </td>
+								<td class="field-value"> 01837782939 </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Address </td>
+								<td class="field-value"> Chittagong, Bangladesh </td>
+							</tr>
+
+							<tr class="py-4 border-y-2">
+								<td class="field"> Email </td>
+								<td class="field-value"> xenonknight54@gmail.com </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">Education</h2>
+					<hr />
+					<p class="py-2">Studied at Chittagong collegiate school <b>2017-19</b></p>
+					<p class="py-2">Graduated from Chittagong college with GPA 5.00 at HSC exam - <b>2019-21</b></p>
+				</div>
+			</div>
+
+			<div>
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">About</h2>
+					<p class="text-justify">Determined and ethusianstic web developer with a passion for creative
+						solutions.
+						Proficient in Javascript, HTML, CSS & Python. Dedicated to learning pragmatic technologies and
+						new languages
+						( Currently enrolled in Data structures and algorithm course ). Created a non-profit website for
+						an IT club at Chittagong College.
+						Looking for an entry level position at great company to be a hard working asset to any team, to
+						learn, grow and develop in the long run.
+					</p>
+				</div>
+
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">Technical Skills</h2>
+					<table>
+						<tbody>
+							<tr class="border-b">
+								<td class="field"> Front end development </td>
+								<td class="field-value w-full"><Progress max={100} value={85} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> Back end development </td>
+								<td class="field-value w-full"><Progress max={100} value={70} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> UI / UX designing </td>
+								<td class="field-value w-full"><Progress max={100} value={78} /></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
+					<h2 class="heading font-righteous">ECA</h2>
+					<p class="pb-4"><b>Co founder & Administrator of Robotics & IoT</b>
+						<br />
+						at Chittagong College Information Technology Club
+					</p>
+					<ul>
+						<li class="py-2 list-disc list-inside"> Directed classes for the members</li>
+						<li class="py-2 list-disc list-inside"> Developed the official website for the club</li>
+						<li class="py-2 list-disc list-inside"> Supervised workshops on Arduino and Electronics and much more</li>
+					</ul>
+					<p class="py-3"><b>CHAMPION</b><br />
+						at Divisional Physics Olympiad 2019</p>
+
+					<p class="py-3"><b>RUNNERS UP</b><br />
+						at Regional Biology Olympiad 2017</p>
+
+					<p class="py-3"><b>2ND RUNNERS UP</b><br />
+						at Divisional Math Olympiad 2016</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>
