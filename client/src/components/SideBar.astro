@@ -24,8 +24,8 @@ const navItems = [
 const { title } = Astro.props as Props;
 ---
 
-<nav class="sticky top-0 sm:w-16 pt-2 bg-black shadow-lg z-30">
-    <div class="flex sm:fixed sm:flex-col top-0 left-0 sm:h-screen sm:w-16">
+<nav class="sticky top-0 sm:w-16 shadow-lg z-30 bg-black pt-2">
+    <div class="flex sm:fixed sm:flex-col top-0 left-0 sm:h-screen sm:w-16 bg-black">
         <h1 class="font-extrabold text-xl px-1 py-2 sm:text-2xl max-h-32 w-auto text-white"><a href="/"> {title} </a></h1>
         <!-- Hamburger button -->
         <div class="flex items-center sm:hidden flex-1 justify-end">

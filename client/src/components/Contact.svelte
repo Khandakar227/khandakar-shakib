@@ -41,7 +41,7 @@
 <div
   class="w-full max-w-7xl mx-auto pb-5 justify-stretch items-center gap-4 sm:flex sm:flex-row-reverse"
 >
-  <div class="bg-indigo-800 rounded-md py-3 px-2 mt-20 min-w-lg shadow shadow-zinc-500">
+  <div class="bg-indigo-800 rounded-md py-3 px-2 mx-auto sm:mt-20 w-full max-w-sm shadow shadow-zinc-500">
     <h2 class="text-3xl font-semibold pb-"> Let's get in touch </h2>
     <p class="py-2 flex gap-1 items-center">
       <img class="w-11" src="https://img.icons8.com/external-others-pike-picture/50/000000/external-Mail-report-others-pike-picture.png" alt="email"/> 
