@@ -5,7 +5,7 @@
             <h2 class="font-poppins py-2 text-xl"> Front end </h2>
             <ul class="list-disc list-inside">
                 <li class="py-1">Semantic HTML5 for accessibility and SEO</li>
-                <li class="py-1">Tailwind CSS for rapid and flecible UI development</li>
+                <li class="py-1">Tailwind CSS for rapid and flexible UI development</li>
                 <li class="py-1">Typescript for type safety and interactivity</li>
                 <li class="py-1">React js, Next js, Svelte and Astro for interactive web application</li>
             </ul>
