@@ -45,6 +45,17 @@
       },
     },
     {
+      src: "/img/dialogflow.png",
+      info: {
+        title: "Chatbot for an IT club",
+        desc: "A chatbot using dialogblow for CCITC club landing page"
+      },
+      action: {
+        src: "https://khandakar227.github.io/dialogflow",
+        type: "link"
+      }
+    },
+    {
       src: "https://raw.githubusercontent.com/Khandakar227/json-data/main/cdn/animeflix.webp",
       info: {
         title: "Animeflix",
@@ -78,13 +89,13 @@
       },
     },
     {
-      src: "https://raw.githubusercontent.com/Khandakar227/json-data/main/cdn/quran-web.webp",
+      src: "/img/Quran_Kareem.png",
       info: {
         title: "Quran Web",
         desc: "A web app for reading the Quran. Only bangla and english translations were added.",
       },
       action: {
-        src: "https://quran-web.netlify.app",
+        src: "https://quranulkareem.vercel.app",
         type: "link",
       },
     },
@@ -130,7 +141,7 @@
           /></svg
         >
         <img
-          class="rounded w-full h-auto mx-auto"
+          class="rounded w-full h-auto mx-auto bg-white"
           src={project.src}
           alt={project.info.title}
         />
