@@ -24,6 +24,6 @@
         @apply text-2xl text-indigo-800 py-4 uppercase;
     }
     .field {
-        @apply font-bold py-1 pr-4;
+        @apply  py-1 pr-4;
     }
 }

@@ -29,6 +29,17 @@
   .min-w-lg {
     min-width: 25rem;
   }
+  .dev {
+    display: none;
+    position: absolute;
+    left: 0px
+  }
+  #hover-dev {
+    position: relative;
+  }
+  #hover-dev:hover .dev {
+    display: block;
+  }
 }
 @layer components {
   .btn, [type=submit] {

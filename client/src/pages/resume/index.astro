@@ -18,9 +18,12 @@ import Image from "./shakib.resume.jpg";
 
 <body>
 	<main class="mx-auto shadow-md rounded-md sm:py-2 max-w-7xl">
-		<div class="sm:flex gap-4 justify-start items-start bg-indigo-800 px-5">
+		<div class="sm:flex gap-4 justify-start sm:justify-center items-start bg-indigo-800 px-5">
 			<img class="w-full max-w-[10rem] rounded-full py-3" src={Image} alt="Shakib" />
-			<h1 class="py-4 font-bold text-2xl sm:text-5xl text-white">Khandakar Shakib Al Hasan</h1>
+			<div>
+				<h1 class="py-4 font-bold text-2xl sm:text-5xl text-white">Khandakar Shakib Al Hasan</h1>
+				<h1 class="py-3 text-xl sm:text-3xl text-white">Web Developer</h1>
+			</div>
 		</div>
 
 		<section class="grid gap-2 items-start sm:grid-cols-2">
@@ -52,7 +55,7 @@ import Image from "./shakib.resume.jpg";
 
 							<tr class="py-4 border-y-2">
 								<td class="field"> Languages </td>
-								<td class="field-value"> Bangla, English </td>
+								<td class="field-value"> Bengali, English </td>
 							</tr>
 						</tbody>
 					</table>
@@ -84,12 +87,10 @@ import Image from "./shakib.resume.jpg";
 				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
 					<h2 class="heading font-righteous">Education</h2>
 					<hr />
-					<p class="py-2">Studied at Chittagong collegiate school <b>2017-19</b></p>
-					<p class="py-2">Graduated from Chittagong college with GPA 5.00 at HSC exam - <b>2019-21</b></p>
+					<p class="py-2">Studied at <b>Chittagong collegiate school</b> 2017-19</p>
+					<p class="py-2">Graduated from <b>Chittagong college</b> with GPA 5.00 at HSC exam - 2019-21</p>
+					<p class="py-2">Currently pursuing a B.Sc. in Computer Science at the <b>Islamic University of Technology (OIC)</b>.</p>
 				</div>
-			</div>
-
-			<div>
 				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
 					<h2 class="heading font-righteous">About</h2>
 					<p class="text-justify">Determined and ethusianstic web developer with a passion for creative
@@ -102,22 +103,60 @@ import Image from "./shakib.resume.jpg";
 						learn, grow and develop in the long run.
 					</p>
 				</div>
+			</div>
+
+			<div>
 
 				<div class="py-4 my-3 shadow-sm rounded-md bg-gray-100 px-3">
 					<h2 class="heading font-righteous">Technical Skills</h2>
 					<table>
 						<tbody>
 							<tr class="border-b">
-								<td class="field"> Front end development </td>
-								<td class="field-value w-full"><Progress max={100} value={85} /></td>
+								<td class="font-bold py-2" colspan="2"> Front end development </td>
 							</tr>
 							<tr class="border-b">
-								<td class="field"> Back end development </td>
+								<td class="field"> HTML, CSS </td>
+								<td class="field-value w-full"><Progress max={100} value={90} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> Typescript </td>
+								<td class="field-value w-full"><Progress max={100} value={80} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> React </td>
+								<td class="field-value w-full"><Progress max={100} value={82} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> Svelte </td>
+								<td class="field-value w-full"><Progress max={100} value={87} /></td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> Tailwind, Bootstrap </td>
+								<td class="field-value w-full"><Progress max={100} value={80} /></td>
+							</tr>
+
+							<tr class="border-b">
+								<td class="font-bold py-2" colspan="2"> Back end development </td>
+							</tr>
+							<tr class="border-b">
+								<td class="field"> Node js </td>
+								<td class="field-value w-full"><Progress max={100} value={80} /></td>
+							</tr>
+							<tr class="border-b">
+								<tr class="border-b">
+									<td class="field"> SQL </td>
+									<td class="field-value w-full"><Progress max={100} value={70} /></td>
+								</tr>
+								<tr class="border-b">
+									<td class="field"> Firebase </td>
+									<td class="field-value w-full"><Progress max={100} value={78} /></td>
+								</tr>
+								<tr class="border-b">
+									<td class="field"> Mongodb </td>
+									<td class="field-value w-full"><Progress max={100} value={65} /></td>
+								</tr>
+								<td class="field"> Express js </td>
 								<td class="field-value w-full"><Progress max={100} value={70} /></td>
-							</tr>
-							<tr class="border-b">
-								<td class="field"> UI / UX designing </td>
-								<td class="field-value w-full"><Progress max={100} value={78} /></td>
 							</tr>
 						</tbody>
 					</table>

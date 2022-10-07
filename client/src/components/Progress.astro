@@ -10,6 +10,6 @@ export interface Props {
 const { class: _class, height, value, max, color } = Astro.props as Props;
 ---
 
-<div class={`w-full bg-gray-300 rounded-full h-2.5 dark:bg-gray-700 ${_class}`} >
-    <div style={`width: ${100*value/(max || 100)}%;  height: ${height || "0.625rem"}; border-radius: 2pc;background-color: ${color || "#3730A3"}`}></div>
+<div class={`w-full bg-gray-300 rounded-full h-2 dark:bg-gray-700 ${_class}`} >
+    <div style={`width: ${100*value/(max || 100)}%;  height: ${height || "0.5rem"}; border-radius: 2pc;background-color: ${color || "#3730A3"}`}></div>
   </div>
