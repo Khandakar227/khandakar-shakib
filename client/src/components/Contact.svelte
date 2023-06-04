@@ -58,7 +58,7 @@
   </div>
 
   <div class="w-full">
-      <form class="p-2 w-full rounded-md shadow shadow-gray-500" on:submit|preventDefault={handleSubmit} disabled={submitted}>
+      <form class="p-2 w-full rounded-md shadow shadow-gray-500" on:submit|preventDefault={handleSubmit}>
         <input
           class="px-3 my-2 rounded py-1 w-full shadow shadow-zinc-500 focus:outline-none focus:shadow-white bg-zinc-700"
           type="text"

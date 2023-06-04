@@ -101,6 +101,8 @@ const expertise = [
 
 		const hoverDev = document.getElementById("hover-dev");
 		const devGif = document.querySelector(".dev") as HTMLImageElement;
+		
+		if(!hoverDev) return;
 		hoverDev.addEventListener('mousemove', e => {
 			const gifPos = e.clientX*100/window.innerWidth;
 			devGif.style.translate = `${gifPos}% 0px`;

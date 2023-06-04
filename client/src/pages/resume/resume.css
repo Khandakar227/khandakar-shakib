@@ -18,6 +18,11 @@
     font-family: "Righteous", sans-serif;
   }
 }
+.cv_cover {
+  border-radius: 40px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
 
 @layer components {
     .heading {
