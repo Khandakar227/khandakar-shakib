@@ -1,7 +1,7 @@
 <div class="py-4 max-w-7xl">
     <div class="sm:flex justify-between items-center py-2">
         <!-- Front end -->
-        <div class="p-1 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
+        <div class="p-4 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
             <h2 class="font-poppins py-2 text-xl"> Front end </h2>
             <ul class="list-disc list-inside">
                 <li class="py-1">Semantic HTML5 for accessibility and SEO</li>
@@ -31,7 +31,7 @@
     </div>
         <!-- Back end -->
     <div class="sm:flex-row-reverse sm:flex justify-between items-center py-2">
-        <div class="p-1 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
+        <div class="p-4 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
             <h2 class="font-poppins py-2 text-xl"> Back end </h2>
             <ul class="list-disc list-inside">
                 <li class="py-1">Rest API with node js and Express</li>
@@ -61,7 +61,7 @@
     </div>
 <!-- Language -->
     <div class="sm:flex justify-between items-center py-2">
-        <div class="p-1 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
+        <div class="p-4 bg-white text-black rounded-md w-full" data-sal="slide-up" data-sal-duration="500">
             <h2 class="font-poppins py-2 text-xl"> Language </h2>
             <ul class="list-disc list-inside">
                 <li class="py-1">HTML & CSS for markup and styling</li>

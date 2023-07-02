@@ -41,7 +41,7 @@
 <div
   class="w-full max-w-7xl mx-auto pb-5 justify-stretch items-center gap-4 sm:flex sm:flex-row-reverse"
 >
-  <div class="bg-indigo-800 rounded-md py-3 px-2 mx-auto sm:mt-20 w-full max-w-sm shadow shadow-zinc-500">
+  <div class="bg-indigo-800 rounded-md py-3 px-2 mx-auto sm:mt-20 w-full max-w-sm shadow-sm shadow-zinc-500">
     <h2 class="text-3xl font-semibold pb-"> Let's get in touch </h2>
     <p class="py-2 flex gap-1 items-center">
       <img class="w-11" src="https://img.icons8.com/external-others-pike-picture/50/000000/external-Mail-report-others-pike-picture.png" alt="email"/> 
@@ -51,8 +51,8 @@
       <img class="bg-white rounded-md w-11" src="https://img.icons8.com/glyph-neue/64/000000/github.png" alt="github"/>
       khandakar227
     </a>
-    <a class="py-2 flex gap-1 items-center" href="https://www.facebook.com/people/Khandakar-Shakib-Al-Hasan/100015443855406/">
-      <img class="w-11" src="https://img.icons8.com/color/48/000000/facebook.png" alt="facebook"/>
+    <a class="py-2 flex gap-1 items-center" href="https://www.linkedin.com/in/shakib-hasan-734494249/">
+      <img class="w-11" src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn"/>
       Khandakar shakib al hasan
     </a>
   </div>

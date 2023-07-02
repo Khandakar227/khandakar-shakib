@@ -34,6 +34,17 @@
       },
     },
     {
+      src: "/img/cv_rush.png",
+      info: {
+        title: "CV Rush - A CV generator app",
+        desc: "Effortlessly create a tailored CV with my automated generator web app. Highly customizable. Supports undo redo, drag and drop.",
+      },
+      action: {
+        src: "https://cv-rush.pages.dev/",
+        type: "link",
+      },
+    },
+    {
       src: "https://raw.githubusercontent.com/Khandakar227/json-data/main/cdn/esmary.webp",
       info: {
         title: "Esmary",
@@ -54,17 +65,6 @@
         src: "https://khandakar227.github.io/dialogflow",
         type: "link"
       }
-    },
-    {
-      src: "https://raw.githubusercontent.com/Khandakar227/json-data/main/cdn/animeflix.webp",
-      info: {
-        title: "Animeflix",
-        desc: "Video streaming site based on netflix's UI.",
-      },
-      action: {
-        src: "https://ani-me-flix.netlify.app",
-        type: "link",
-      },
     },
     {
       src: "https://gh-card.dev/repos/Khandakar227/user-authentication-system.svg",
